@@ -67,7 +67,7 @@ class SiteController extends Controller
             }
             $url .= $parse['host'];
             if (isset($parse['port'])) {
-                $url .= $parse['port'];
+                $url .= ':'.$parse['port'];
             }
             $html = new SimpleHTMLDom();
             $out = @$html->file_get_html($url);
