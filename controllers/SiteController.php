@@ -84,16 +84,23 @@ class SiteController extends Controller
                 $collection = $out->find('a');
                 foreach ($collection as $item) {
                     if (isset($item->attr) && isset($item->attr['href'])) {
-                        $href = $item->attr['href'];
+                        $href = trim($item->attr['href']);
                         if (stripos($href, 'mailto:') === 0) {
                             continue;
                         }
-                        if (stripos($href, '/') === 0) {
+                        if($href=='#' || !$href){
+                            continue;
+                        }
+                        if ((stripos($href, '/') === 0 && stripos($href, '//') === false) || stripos($href, '?') === 0) {
                             $href = $url . $href;
+                        }
+                        if(stripos($href, '//') === 0){
+                            $href = 'http:'.$href;
                         }
                         $hrefs[] = $href;
                     }
                 }
+                $hrefs = array_unique($hrefs);
                 $model->url = $url;
                 return $this->render(
                     'index',
