@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "865ce4d9e6c2c445e707b268f070dd3f",
+    "hash": "0324f89f40aee03ee39f0644f451d890",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -314,6 +314,47 @@
                 "html"
             ],
             "time": "2013-11-30 08:25:19"
+        },
+        {
+            "name": "serhatozles/yii2-simplehtmldom",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/serhatozles/yii2-simplehtmldom.git",
+                "reference": "64f36d1ff3ec9bff04b06f98c1648b5fea326554"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/serhatozles/yii2-simplehtmldom/zipball/64f36d1ff3ec9bff04b06f98c1648b5fea326554",
+                "reference": "64f36d1ff3ec9bff04b06f98c1648b5fea326554",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "serhatozles\\simplehtmldom\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "serhatozles",
+                    "email": "serhatozles@gmail.com"
+                }
+            ],
+            "description": "Simple HTML Dom",
+            "keywords": [
+                "extension",
+                "simplehtmldom",
+                "yii2"
+            ],
+            "time": "2014-12-01 19:14:07"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -901,7 +942,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "serhatozles/yii2-simplehtmldom": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
